@@ -45,6 +45,7 @@ import java.util.Collection;
  *   - best practices
  *   - unit tests
  */
+ 
 public interface NumberRangeSummarizer {
 
     //collect the input
