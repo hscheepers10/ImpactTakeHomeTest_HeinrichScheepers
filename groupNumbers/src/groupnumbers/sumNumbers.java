@@ -5,6 +5,7 @@ import static groupnumbers.GroupNumbers.usrInput_a;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,14 +47,20 @@ public class sumNumbers implements NumberRangeSummarizer{
         
         input = this.collect(usrInput_a);
         
-        res = input.toString();
         
         
         //////////////////LOGIC//////////////////////////
+        Iterator<Integer> iter = input.iterator();
+        
+        while(iter.hasNext()){
+            int c = iter.next();
+            if(c==iter.next()+1){
+                
+            }
+        }
         
         
-        
-        
+        res = input.toString();
         return res;
     }
     
