@@ -14,28 +14,21 @@ public class sumNumbers implements NumberRangeSummarizer{
 
     @Override
     public Collection<Integer> collect(String input) {
-        input = usrInput_b;     //Assigning input interface's String variable.  
-//        String[] StringInputArr = input.split(",");
-//        
-//        int[] intInputArr = new int[StringInputArr.length];
-//        for(int i = 0;i <=StringInputArr.length;i++){
-//            String num = StringInputArr[i];
-//            intInputArr[i] = Integer.parseInt(num);
-//            
-//        }
-        
-        String[] arr = input.split(",");
+        input = usrInput_b;                             //Assigning input interface's String variable.  
 
-        List<Integer> intList = Arrays.stream(arr)
+        String[] arr = input.split(",");                //Converting String into Array by splitting ",".  
+
+        List<Integer> intList = Arrays.stream(arr)      //Creating List by ....
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
         
-        return intList;
-        
+        return intList;                                 //Returns collection of type Integer (Required).  
     }
 
     @Override
     public String summarizeCollection(Collection<Integer> input) {
+        
+        
         
         throw new UnsupportedOperationException("Not supported yet.");
     }
