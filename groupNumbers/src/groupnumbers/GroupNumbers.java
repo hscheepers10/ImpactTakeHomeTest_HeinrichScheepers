@@ -26,7 +26,7 @@ public class GroupNumbers {
         //Test purposes.  
         //Actual calling of methods will happen in sumNumbers class.  
 //        System.out.println(sum1.collect(usrInput_b));
-        System.out.println(sum1.summarizeCollection(sum1.collect(usrInput_a)));
+        System.out.println("Nani: "+sum1.summarizeCollection(sum1.collect(usrInput_a)));
         
         
 

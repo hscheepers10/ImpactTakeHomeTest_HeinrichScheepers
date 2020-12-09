@@ -41,23 +41,54 @@ public class sumNumbers implements NumberRangeSummarizer{
     //Summarizing data.  
     @Override
     public String summarizeCollection(Collection<Integer> input) {  
-        String res;                                    //Ressult variable of type String to be returned to main.
+        input = this.collect(usrInput_a);
+                                         //Ressult variable of type String to be returned to main.
         //TODO: decide whether to 'sout' in main or .this.
         
         
-        input = this.collect(usrInput_a);
+        
         
         
         
         //////////////////LOGIC//////////////////////////
-        Iterator<Integer> iter = input.iterator();
         
-        while(iter.hasNext()){
-            int c = iter.next();
-            if(c==iter.next()+1){
-                
+//        Iterator<Integer> iter = input.iterator();
+//        
+//        while(iter.hasNext()){
+//            int c = iter.next();
+//            if(c==iter.next()+1){
+//                
+//            }
+//        }
+        
+        Integer inArr[] = new Integer[input.size()];      //Creating array from list.  
+        inArr = input.toArray(inArr);
+        
+        String res = inArr[0].toString();
+        
+        for(int i = 0;i<=inArr.length;i++){
+            if(inArr[i+1].toString().equals(inArr[i].toString())){
+                boolean cond = true;
+                String seqStart;
+                String seqFin;
+                while(cond = true){
+                    if(inArr[i+1].toString().equals(inArr[i+2].toString())){
+                        seqStart = inArr[i].toString();
+                        res = res + ", "+seqStart;
+                        
+                    }else{
+                        cond = false;
+                        seqFin = inArr[i+1].toString();
+                        res = res + "-" +seqFin;
+                    }
+                }
+            }else{
+                res = res + "";
             }
         }
+        
+
+        
         
         
         res = input.toString();
