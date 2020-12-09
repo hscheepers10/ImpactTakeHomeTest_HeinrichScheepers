@@ -1,6 +1,7 @@
 package groupnumbers;
 
 import static groupnumbers.GroupNumbers.usrInput_a;
+import java.util.ArrayList;
 //import static groupnumbers.GroupNumbers.usrInput_b;
 import java.util.Arrays;
 import java.util.Collection;
@@ -45,53 +46,58 @@ public class sumNumbers implements NumberRangeSummarizer{
                                          //Ressult variable of type String to be returned to main.
         //TODO: decide whether to 'sout' in main or .this.
         
-        
-        
-        
-        
-        
         //////////////////LOGIC//////////////////////////
         
-//        Iterator<Integer> iter = input.iterator();
+//        Integer inArr[] = new Integer[input.size()];      //Creating array from list.  
+//        inArr = input.toArray(inArr);
 //        
-//        while(iter.hasNext()){
-//            int c = iter.next();
-//            if(c==iter.next()+1){
-//                
+//        String res = inArr[0].toString();
+        
+//        for(int i = 0;i<inArr.length;i++){
+//            int i1 = i+1;
+//            int i2 = i+2;
+//            
+//            if(inArr[i1].toString().equals(inArr[i].toString())){
+//                boolean cond = true;
+//                String seqStart;
+//                String seqFin;
+//                while(cond = true){
+//                    if(inArr[i1].toString().equals(inArr[i2].toString())){
+//                        seqStart = inArr[i].toString();
+//                        res = res + ", "+seqStart;
+//                        
+//                    }else{
+//                        cond = false;
+//                        seqFin = inArr[i+1].toString();
+//                        res = res + "-" +seqFin;
+//                    }
+//                }
+//            }else{
+//                res = res + "";
 //            }
 //        }
-        
-        Integer inArr[] = new Integer[input.size()];      //Creating array from list.  
-        inArr = input.toArray(inArr);
-        
-        String res = inArr[0].toString();
-        
-        for(int i = 0;i<=inArr.length;i++){
-            if(inArr[i+1].toString().equals(inArr[i].toString())){
-                boolean cond = true;
-                String seqStart;
-                String seqFin;
-                while(cond = true){
-                    if(inArr[i+1].toString().equals(inArr[i+2].toString())){
-                        seqStart = inArr[i].toString();
-                        res = res + ", "+seqStart;
-                        
-                    }else{
-                        cond = false;
-                        seqFin = inArr[i+1].toString();
-                        res = res + "-" +seqFin;
-                    }
-                }
-            }else{
-                res = res + "";
-            }
-        }
-        
+//        res = input.toString();
 
         
+        String res = "";
+
+        Integer[] intArr = new Integer[input.size()];
+        intArr = input.toArray(intArr);
         
+        Integer[] intArrRef = new Integer[intArr.length+1];
+        intArrRef[0] = 0;
+        for(int i =1; i < intArrRef.length; i++){
+            int j = i - 1;
+            intArrRef[i] = intArr[j];
+        }
         
-        res = input.toString();
+        for(int c = 0; c < intArrRef.length; c++){
+            if(intArr[c]!=intArrRef[c] && intArr[c]!=intArr[c+1]){
+                res = intArr[c]+", ";
+            }
+        }
+
+
         return res;
     }
     
