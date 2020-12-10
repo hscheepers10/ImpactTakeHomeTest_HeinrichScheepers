@@ -105,28 +105,29 @@ public class sumNumbers implements NumberRangeSummarizer{
         
         //Variables.  
         String res = "";
-//        int previous = inArr[0];
-//        int start = previous;
+        int previous = inArr[0];
+        int start = previous;
         
-        res = Arrays.toString(inArr);
         
-//        for(int i = 1; i<inArr.length;i++){
-//            if(inArr[i] == previous+1){
-//                res = res + start+ "-" + inArr[i];
-//                
-//            }else{
-//                if(start == previous){
-//                    res = res + start + "";
-//                }else{
-//                    res = res + start + "-" + previous;
-//                }
-//                if(i == inArr.length-1){
-//                    res = res + inArr[i]+"";
-//                }
-//                start = inArr[i];
-//            }
-//            previous = inArr[i];
-//        }
+        
+        for(int i = 1; i<inArr.length;i++){
+            if(inArr[i] == previous+1){
+                res = res + start+ "-" + inArr[i] +",";
+                
+            }else{
+                if(start == previous){
+                    res = res + start + ",";
+                }else{
+                    res = res + start + "-" + previous;
+                }
+                
+                if(i == inArr.length-1){
+                    res = res + inArr[i]+"";
+                }
+                start = inArr[i];
+            }
+            previous = inArr[i];
+        }
         
         
          //Ressult variable of type String to be returned to main.
