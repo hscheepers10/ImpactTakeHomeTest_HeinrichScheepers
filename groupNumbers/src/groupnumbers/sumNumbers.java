@@ -43,7 +43,6 @@ public class sumNumbers implements NumberRangeSummarizer{
     @Override
     public String summarizeCollection(Collection<Integer> input) {  
         input = this.collect(usrInput_a);
-                                         //Ressult variable of type String to be returned to main.
         //TODO: decide whether to 'sout' in main or .this.
         
         //////////////////LOGIC//////////////////////////
@@ -52,7 +51,6 @@ public class sumNumbers implements NumberRangeSummarizer{
 //        inArr = input.toArray(inArr);
 //        
 //        String res = inArr[0].toString();
-        
 //        for(int i = 0;i<inArr.length;i++){
 //            int i1 = i+1;
 //            int i2 = i+2;
@@ -79,25 +77,59 @@ public class sumNumbers implements NumberRangeSummarizer{
 //        res = input.toString();
 
         
+
+//        Integer[] intArr = new Integer[input.size()];
+//        intArr = input.toArray(intArr);
+//        
+//        Integer[] intArrRef = new Integer[intArr.length+1];
+//        intArrRef[0] = 0;
+//        for(int i =1; i < intArrRef.length; i++){
+//            int j = i - 1;
+//            intArrRef[i] = intArr[j];
+//        }
+//        
+//        for(int c = 0; c < intArrRef.length; c++){
+//            if(intArr[c]!=intArrRef[c] && intArr[c]!=intArr[c+1]){
+//                res = intArr[c]+", ";
+//            }
+//        }
+        
+        
+    
+        
+        
+        Integer[] inArr = new Integer[input.size()];        //Creating Integer Array from input List.  
+        inArr = input.toArray(inArr);
+        
+        
+        
+        //Variables.  
         String res = "";
-
-        Integer[] intArr = new Integer[input.size()];
-        intArr = input.toArray(intArr);
+//        int previous = inArr[0];
+//        int start = previous;
         
-        Integer[] intArrRef = new Integer[intArr.length+1];
-        intArrRef[0] = 0;
-        for(int i =1; i < intArrRef.length; i++){
-            int j = i - 1;
-            intArrRef[i] = intArr[j];
-        }
+        res = Arrays.toString(inArr);
         
-        for(int c = 0; c < intArrRef.length; c++){
-            if(intArr[c]!=intArrRef[c] && intArr[c]!=intArr[c+1]){
-                res = intArr[c]+", ";
-            }
-        }
-
-
+//        for(int i = 1; i<inArr.length;i++){
+//            if(inArr[i] == previous+1){
+//                res = res + start+ "-" + inArr[i];
+//                
+//            }else{
+//                if(start == previous){
+//                    res = res + start + "";
+//                }else{
+//                    res = res + start + "-" + previous;
+//                }
+//                if(i == inArr.length-1){
+//                    res = res + inArr[i]+"";
+//                }
+//                start = inArr[i];
+//            }
+//            previous = inArr[i];
+//        }
+        
+        
+         //Ressult variable of type String to be returned to main.
         return res;
     }
     
