@@ -47,6 +47,42 @@ public class sumNumbers implements NumberRangeSummarizer{
         
         //////////////////LOGIC//////////////////////////
         
+        Integer[] inArr = new Integer[input.size()];        //Creating Integer Array from input List.  
+        inArr = input.toArray(inArr);                       //INt Array.  
+        
+        //Variables.  
+        String res = "";
+        int previous = inArr[0];
+        int start = previous;
+        
+        for(int i = 1; i<inArr.length;i++){
+            if(inArr[i] == previous+1){
+                if(i==inArr.length-1){
+                res = res + start+ "-" + inArr[i] +",";
+                }
+                
+            }else{
+                if(start == previous){
+                    res = res + start + ",";
+                }else{
+                    res = res + start + "-" + previous;
+                }
+                
+                if(i == inArr.length-1){
+                    res = res + inArr[i]+"";
+                }
+                start = inArr[i];
+            }
+            previous = inArr[i];
+        }
+         //Ressult variable of type String to be returned to main.
+        return res;
+    }
+     
+    
+    
+    
+    
 //        Integer inArr[] = new Integer[input.size()];      //Creating array from list.  
 //        inArr = input.toArray(inArr);
 //        
@@ -97,41 +133,9 @@ public class sumNumbers implements NumberRangeSummarizer{
         
     
         
+//* Sample Input: "1,3,6,7,8,12,13,14,15,21,22,23,24,31"
+// * Result: "1, 3, 6-8, 12-15, 21-24, 31"        
+
         
-        Integer[] inArr = new Integer[input.size()];        //Creating Integer Array from input List.  
-        inArr = input.toArray(inArr);
-        
-        
-        
-        //Variables.  
-        String res = "";
-        int previous = inArr[0];
-        int start = previous;
-        
-        
-        
-        for(int i = 1; i<inArr.length;i++){
-            if(inArr[i] == previous+1){
-                res = res + start+ "-" + inArr[i] +",";
-                
-            }else{
-                if(start == previous){
-                    res = res + start + ",";
-                }else{
-                    res = res + start + "-" + previous;
-                }
-                
-                if(i == inArr.length-1){
-                    res = res + inArr[i]+"";
-                }
-                start = inArr[i];
-            }
-            previous = inArr[i];
-        }
-        
-        
-         //Ressult variable of type String to be returned to main.
-        return res;
-    }
     
 }
