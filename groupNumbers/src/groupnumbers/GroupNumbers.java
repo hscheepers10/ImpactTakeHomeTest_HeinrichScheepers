@@ -21,6 +21,9 @@ public class GroupNumbers {
         System.out.println("Enter numbers sepperated buy commas: ");
         usrInput_a = cin.next();
         
+        //if using static variable usrInput_b. comment out two lines of code above (line 21 and 22). and un-comment line below(line 25).    
+//        System.out.println("Sample Input: \"1,3,6,7,8,12,13,14,15,21,22,23,24,31\"");
+        
         //instance class sumNumber that implements NumberRangeSummarizer interface.  
         sumNumbers sum1 = new sumNumbers();
         
