@@ -58,14 +58,14 @@ public class sumNumbers implements NumberRangeSummarizer{
         for(int i = 1; i<inArr.length;i++){
             if(inArr[i] == previous+1){
                 if(i==inArr.length-1){
-                res = res + start+ "-" + inArr[i] +",";
+                res = res + start+ "-" + inArr[i] +", ";
                 }
                 
             }else{
                 if(start == previous){
-                    res = res + start + ",";
+                    res = res + start + ", ";
                 }else{
-                    res = res + start + "-" + previous;
+                    res = res + start + "-" + previous+ ", ";
                 }
                 
                 if(i == inArr.length-1){
