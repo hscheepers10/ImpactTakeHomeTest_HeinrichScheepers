@@ -1,3 +1,4 @@
+//Interface to implement as received from Impact.  
 package groupnumbers;
 
 import java.util.Collection;
