@@ -17,10 +17,10 @@ public class sumNumbers implements NumberRangeSummarizer{
     ///// GETTING USER INPUT /////  
     @Override
     public Collection<Integer> collect(String input) {
-        //for manual data input leave as is.  
-        //for static input, use usrInput_b and comment out usrInput_a
-        input = usrInput_a;                                   
-//        input = usrInput_b;
+        //for using static data (usrInput_b) leave as is.  
+        //for manual input, use usrInput_a and comment out usrInput_b
+//        input = usrInput_a;                                   
+        input = usrInput_b;
 
         String[] InStringArr = input.split(",");                    //Converting String received from user into String Array by splitting ","  
 
@@ -29,7 +29,7 @@ public class sumNumbers implements NumberRangeSummarizer{
                 .distinct()                                         //Removing duplicates from List.  
                 .collect(Collectors.toList());                      //Collecting parsed integers and saving as List of type Integer.  
         Collections.sort(intList);                                  //Added sort to sort data automatically before sending to summarize.    
-
+        
         return intList;                                             //Returns collection of type Integer (Required).  
     }
 
@@ -38,9 +38,8 @@ public class sumNumbers implements NumberRangeSummarizer{
     @Override
     public String summarizeCollection(Collection<Integer> input) {
         //Calling collect method. || again use usrInput_a for manual user data and usrInput_b for static user data variable created in Main. 
-          
-        input = this.collect(usrInput_a);
-//        input = this.collect(usrInput_b);
+//        input = this.collect(usrInput_a);
+        input = this.collect(usrInput_b);
         
         //////////////////LOGIC//////////////////////////
         Integer[] inArr = new Integer[input.size()];                //Creating Integer Array from input List.  
