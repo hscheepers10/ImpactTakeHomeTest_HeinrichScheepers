@@ -19,6 +19,6 @@ public class GroupNumbersTest {
     //usrInput_b which is static input variable should not be null.  
     @Test   
     public void usrInput_bShouldNotBeNull() {
-        assertNotNull(GroupNumbers.usrInput_b);
+        assertNotNull(GroupNumbers.testData);
     }
 }

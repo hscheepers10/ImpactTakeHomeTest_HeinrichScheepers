@@ -53,8 +53,8 @@ public class sumNumbersTest {
             expList.add(i);
         }
         
-        String input = GroupNumbers.usrInput_b;
-        sumNumbers instance = new sumNumbers();
+        String input = GroupNumbers.testData;
+        SumNumbers instance = new SumNumbers();
         Collection<Integer> expResult = expList;
         Collection<Integer> result = instance.collect(input);
         assertEquals(expResult, result);
@@ -68,7 +68,7 @@ public class sumNumbersTest {
     public void testSummarizeCollection() {
         System.out.println("summarizeCollection");
         Collection<Integer> input = null;
-        sumNumbers instance = new sumNumbers();
+        SumNumbers instance = new SumNumbers();
         String expResult = "";
         String result = instance.summarizeCollection(input);
         assertEquals(expResult, result);
