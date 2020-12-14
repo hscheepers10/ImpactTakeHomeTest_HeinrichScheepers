@@ -9,16 +9,25 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * @author Heinrich Scheepers
+ *
+ * @author User
  */
 public class GroupNumbersTest {
+    
     public GroupNumbersTest() {
-        
+    }
+
+    
+    /**
+     * Test of main method, of class GroupNumbers.
+     */
+    @Test
+    public void testCollectShouldBeNull() {
+        System.out.println("Testing to see if return is null ");
+        String[] args = null;
+        GroupNumbers.main(args);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
-    //usrInput_b which is static input variable should not be null.  
-    @Test   
-    public void usrInput_bShouldNotBeNull() {
-        assertNotNull(GroupNumbers.testData);
-    }
 }
