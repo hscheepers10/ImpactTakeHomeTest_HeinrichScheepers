@@ -13,8 +13,7 @@ public class SumNumbers implements NumberRangeSummarizer {
     ///// GETTING USER INPUT /////  
     @Override
     public Collection<Integer> collect(String input) {
-        try {
-            //TODO validate input to be of type Integer.  
+        try {  
             String[] InStringArr = input.split(",");                            //Converting String received from user into String Array by splitting ","  
 
             List<Integer> intList = Arrays.stream(InStringArr)                  //Obtaining a stream instance from int String Array.  

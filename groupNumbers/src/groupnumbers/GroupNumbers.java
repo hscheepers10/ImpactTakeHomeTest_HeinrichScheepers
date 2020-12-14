@@ -32,10 +32,10 @@ public class GroupNumbers {
             } else {
                 input = userData;
             }
-            collectInt = sum1.collect(input);
+            collectInt = sum1.collect(input);           //Collect Method.  
         } while (collectInt == null);
 
-        //collect method is called through the summarizeCollection method.
+        // SummariseCollection Method called.  
         System.out.println("Result: " + sum1.summarizeCollection(collectInt));
     }
 }
